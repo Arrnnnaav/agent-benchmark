@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+langchain
+langchain-openai
+langchain-community
+langgraph
+tavily-python
+httpx
+beautifulsoup4
+chromadb
+sentence-transformers
+pydantic
+pydantic-settings
+python-dotenv
+tiktoken
+tenacity

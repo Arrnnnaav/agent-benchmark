@@ -1,0 +1,16 @@
+{
+  "agent_type": "memory",
+  "topic": "artificial intelligence in healthcare",
+  "report": "Based on the search results, here is a comprehensive report with key findings and summary:\n\n**Key Findings:**\n\n1. **Increased Adoption:** Healthcare organizations are expected to have more risk tolerance for AI initiatives, leading to increased adoption in 2025.\n2. **AI Supporting Doctors:** AI is being used to support doctors, rather than replacing them, which aligns with our previous knowledge.\n3. **AI in Well-Defined Tasks:** AI excels at well-defined tasks, which is consistent with its application in data analysis, patient monitoring, and clinical decision support.\n4. **AI in Resource-Constrained Services:** AI is being used to support poorly resourced services, which highlights its potential to improve healthcare outcomes in underserved areas.\n\n**Summary:**\n\nThe current trends in artificial intelligence in healthcare are focused on augmenting the capabilities of healthcare professionals, rather than replacing them. AI is being used for well-defined tasks, such as data analysis, patient monitoring, and clinical decision support. The increased adoption of AI in healthcare is expected to continue in 2025, with a greater risk tolerance among healthcare organizations. Overall, AI has the potential to improve healthcare outcomes, particularly in resource-constrained services.",
+  "latency_seconds": 19.641,
+  "token_usage": {
+    "prompt_tokens": 887,
+    "completion_tokens": 654,
+    "total_tokens": 1541,
+    "estimated_cost_usd": 9.667e-05
+  },
+  "quality_feedback": null,
+  "quality_score": null,
+  "iterations_used": null,
+  "metadata": {}
+}
