@@ -26,7 +26,7 @@ def get_critic_llm() -> ChatGroq:
     )
 
 
-# ── Generator — researches and writes ─────────────────────────
+#  Generator - researches and writes 
 def generate_draft(topic: str, feedback: str = None, callbacks: list = None) -> str:
     tools = [get_search_tool()]
     system_prompt = (
@@ -43,14 +43,14 @@ def generate_draft(topic: str, feedback: str = None, callbacks: list = None) -> 
     if feedback:
         task = f"""Topic: {topic}
 
-Previous draft was scored. Critic feedback:
-{feedback}
+            Previous draft was scored. Critic feedback:
+            {feedback}
 
-Rewrite the report addressing all the feedback points."""
+            Rewrite the report addressing all the feedback points."""
     else:
         task = f"""Topic: {topic}
 
-Search for key information and write a structured report with findings and summary."""
+            Search for key information and write a structured report with findings and summary."""
 
     config = {"callbacks": callbacks or []}
     result = agent.invoke(
@@ -63,7 +63,7 @@ Search for key information and write a structured report with findings and summa
     return ""
 
 
-# ── Critic — scores and gives feedback ────────────────────────
+#  Critic — scores and gives feedback
 def critique_draft(topic: str, draft: str) -> tuple[float, str]:
     critic_llm = get_critic_llm()
     system_msg = SystemMessage(content=(
@@ -94,7 +94,7 @@ def critique_draft(topic: str, draft: str) -> tuple[float, str]:
     return score, feedback
 
 
-# ── Main reflection loop ───────────────────────────────────────
+# Main reflection loop 
 def run_reflection_agent(topic: str, callbacks: list = None, **kwargs) -> str:
     max_iterations = int(os.getenv("MAX_REFLECTION_ITERATIONS", 3))
     threshold = float(os.getenv("REFLECTION_QUALITY_THRESHOLD", 7.0))
