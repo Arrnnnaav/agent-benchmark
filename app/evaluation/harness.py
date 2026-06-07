@@ -5,7 +5,7 @@ from langchain_core.outputs import LLMResult
 from app.models import RunResult, TokenUsage, AgentType
 
 
-# ── Token counting callback ────────────────────────────────────
+# Token counting callback 
 class TokenCounterCallback(BaseCallbackHandler):
 
     def __init__(self):
@@ -21,7 +21,7 @@ class TokenCounterCallback(BaseCallbackHandler):
             self.total_tokens += usage.get("total_tokens", 0)
 
 
-# ── Cost calculation ───────────────────────────────────────────
+# Cost calculation 
 def calculate_cost(prompt_tokens: int, completion_tokens: int, model: str) -> float:
     PRICES = {
         "llama-3.1-8b-instant": {
@@ -39,14 +39,14 @@ def calculate_cost(prompt_tokens: int, completion_tokens: int, model: str) -> fl
     return round(input_cost + output_cost, 8)
 
 
-# ── Main harness function ──────────────────────────────────────
+# Main harness function
 def run_with_harness(
     agent_fn: Callable,
     topic: str,
     agent_type: AgentType,
     model: str,
     **kwargs
-) -> RunResult:
+    ) -> RunResult:
 
     callback = TokenCounterCallback()
     start_time = time.time()
